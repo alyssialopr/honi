@@ -1,0 +1,46 @@
+#inscription{
+    outline: solid #D0D0D0;
+    height: 690px;
+    animation-name: Opacity;
+    animation-duration: 2000ms
+}
+
+.options-inscription{
+    width: 118px;
+    margin: auto;
+    margin-top: 15px;
+}
+ 
+.inspect{
+    font-family: 'monserrat-black';
+    font-size: larger;
+    width: 150px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.submit{
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+.nu{
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.surname{ 
+    margin-top: 10px;
+    margin-left: 230px;
+}
+
+.nom-util{
+    margin-left: 140px;
+}
+
+@media screen and (max-width : 800px){
+    #inscription{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

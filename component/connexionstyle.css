@@ -1,0 +1,106 @@
+#connexion{
+    outline: solid #D0D0D0;
+    height: 600px;
+    animation-name: Opacity;
+    animation-duration: 2000ms
+}
+
+.connect{
+    font-family: 'monserrat-black';
+    font-size: larger;
+    width: 170px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.options-connexion{
+    width: 170px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.logo-connexion{
+    width: 140px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.facebook{
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
+}
+
+.google{
+    height: 30px;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.apple{
+    height: 35px;
+    width: 30px;
+}
+
+.logo-connexion{
+    display: flex;
+    align-items: center;
+}
+
+.ou{
+    width: 20px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.oup{
+    font-size: 'Monserrat-regular';
+    margin-top: 15px;
+    margin-left: 260px;
+}
+
+.password{
+    margin-top: 15px;
+    margin-left: 200px;
+}
+
+.mail{
+    margin-top: 15px;
+    margin-left: 250px;
+}   
+
+.email{
+    width: 250px;
+    height: 50px;
+    margin-left: 140px;
+}
+
+.mdp{
+    width: 250px;
+    height: 50px;
+    margin-left: 140px; 
+}
+
+.nom-util{
+    width: 250px;
+    height: 50px;
+}
+
+
+
+@media screen and (max-width : 800px){
+    #connexion{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .formulaire{
+        margin-left: -40px;
+    }
+}

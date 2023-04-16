@@ -1,0 +1,77 @@
+/* modal de post */
+.modale{
+    display: none;
+    position: fixed;
+    right: 300px;
+    top: 0;
+}
+
+
+#contenu{
+    display: flex;
+    position: fixed;
+    justify-content: start;
+    width: 300px;
+    height: 200px;
+    padding: 0;
+}
+
+/* modal inscription */
+#pop{
+    /* display: none; */
+    height: 200px;
+    width: 1263px;
+    outline: 1px solid grey;
+    position: sticky;
+    padding: 20px;
+    top: 50;
+    left: 50;
+    box-shadow: 
+    rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#register{
+    text-decoration: none;
+    font-family:'Monserrat-regular' ;
+    outline: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    border: none;
+    height: 60px;
+    width: 120px;
+    border-radius: 40px;
+    margin-left: 560px;
+}
+
+#register:hover{
+    background-color: rgb(136, 136, 136);
+}
+
+.message{
+    font-family: 'Monserrat-regular';
+    font-size: 30px;
+    margin-left: 450px;
+}
+
+
+@media screen and (max-width : 800px) {
+    #pop{
+        height: 130px;
+        width:auto;
+        margin-top: 70px;
+    }
+
+    .message{
+        font-size: 18px;
+        margin-left: 0;
+    }
+
+    #register{
+        margin-left: 0;
+    }
+}
