@@ -1,0 +1,144 @@
+header{
+    display: flex;
+    align-items: center;
+    background-color: #faf3e2;
+    height: 85px;
+}
+
+.btn-logo{
+    border: none;
+    background-color:rgb(0, 0, 0,0);
+}
+
+.logo-honi{
+    margin-left: 10px;
+}
+
+.honi:hover{
+    animation-name: shakeX;
+    animation-duration: 1000ms;
+}
+
+.titre{
+    margin-top: 15px;
+    margin-left: 60px;
+}
+
+
+.search{
+    border-radius: 80px;
+    height: 40px;
+    width: 260px;
+    margin-left: 25px;
+}
+
+.home{
+    text-align: center;
+}
+
+
+.logo{
+    margin: 18px;
+    height: 30px;
+    width: 30px;
+}
+
+
+.head-logo{
+    margin-left: 500px;
+    margin-top: 25px;
+}
+
+.modif{
+    font-size: 0;
+    visibility: hidden;
+}
+
+.hamburger{
+    display: none;
+    border-radius: 50%;
+    background-color: #d9bb74c5;
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 110px;
+}
+
+#closed{
+    visibility: hidden;
+}
+
+@media screen and (max-width : 900px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .search{
+     margin-left: 100px;   
+    }
+
+    .honi{
+        visibility: hidden;
+    }
+
+    .logo{
+        display: grid;
+        grid-column: 2 ;
+        margin: 0; 
+        position: relative;
+        height: 20;
+        top: 25px;
+        right: 50px;
+        /* display: none; */
+    }
+
+    .modif{
+        visibility: visible;
+        position: relative;
+        right: 10px;
+        top: 5px;
+        font-size: 15px;
+        width: 10px;
+        /* display: none; */
+    }
+
+    
+
+    #compte{
+        position: relative;
+        right: 10px;
+    }
+
+    .btn-logo:hover, .btn-logo:focus{
+        color: darkorange;
+    }
+
+    .head-logo{
+        width: 100000px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+        padding-left: 70px;
+        padding-bottom: 40px;
+        right: 490px;
+        top: 170px;
+        display: none;
+    }
+    
+    #closed{
+        visibility: visible;
+        margin-top: 30px;
+        position: relative;
+        border: none;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+}
