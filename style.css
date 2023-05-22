@@ -5,7 +5,7 @@
 @import url(component/connexionstyle.css);
 @import url(component/inscriptionstyle.css);
 @import url(component/modal.css);
-
+@import url(component/profilstyle.css);
 
 @font-face {
     font-family: 'Larissa' ;
@@ -38,6 +38,7 @@
     src: url(font/Montserrat-SemiBold.ttf);
 }
 
+*{margin: 0}
 
 h3{
     font-family: 'Larissa';
@@ -147,5 +148,4 @@ img{
         .col{
             visibility: hidden;
         }
-
 }

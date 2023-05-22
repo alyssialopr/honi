@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $data = [
           "post_id" => $_POST['post_id'],
         ];
-  
+        
         $request_delete = $database->prepare("DELETE FROM post WHERE id = :post_id");
         $post_deleted = $request_delete->execute($data);
         header('Location: index.php');

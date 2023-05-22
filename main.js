@@ -14,13 +14,11 @@ close.onclick = function() {
 }
 
 // Bouton suppression
-const trash = document.getElementById('delete');
+const delt = document.getElementById('sppr')
 
-const bye = document.getElementById('effacable')
-
-trash.onclick= function() {
-    bye.remove()
-}
+delt.addEventListener("click", () => {
+  confirm("Souhaitez-vous supprimer ce post");
+})
 
 // Effet flou sur tout l'écran
 const blurry = document.getElementById('row');
@@ -28,7 +26,7 @@ const blurry = document.getElementById('row');
 window.addEventListener('scroll', function() {
   const scrollDistance = window.pageYOffset;
 
-  blurry.style.filter = `blur(${scrollDistance / 900}px)`;
+  blurry.style.filter = `blur(${scrollDistance / 1000}px)`;
 });
 
 
@@ -63,3 +61,5 @@ btnnav.onclick = function() {
 closed.onclick = function() {
     navbar.style.display = "none";
 }
+
+// Filtres sur les tags

@@ -11,7 +11,9 @@
 <body>
     <header class="header">
         <div class="logo-honi">
-            <img id="bee-honi" src="images/Logo/abeille-HONI.png" alt="logo Abeille Honi">
+            <a href="http://localhost/honi/index.php">
+                <img id="bee-honi" src="images/Logo/abeille-HONI.png" alt="logo Abeille Honi">
+            </a>
         </div>
         <div class="titre">
             <h3 class="honi">Honi</h3>

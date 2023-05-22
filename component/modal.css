@@ -4,8 +4,11 @@
     position: fixed;
     right: 300px;
     top: 0;
+    background-color: rgb(232, 236, 207);
+    width: 351px;
+    height: 363px;
+    border-radius: 20px;
 }
-
 
 #contenu{
     display: flex;
@@ -14,25 +17,54 @@
     width: 300px;
     height: 200px;
     padding: 0;
+    margin-left: 20px;
 }
 
-/* modal inscription */
-#pop{
-    /* display: none; */
-    height: 200px;
-    width: 1263px;
-    outline: 1px solid grey;
-    position: sticky;
-    padding: 20px;
-    top: 50;
-    left: 50;
-    box-shadow: 
-    rgba(0, 0, 0, 0.25) 0px 54px 55px, 
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.filtretags{
+    display: flex;
+    position: fixed;
+    top: 270px;
+    margin-left: 20px;
 }
+
+/* #submitimage{
+    display: flex;
+    position: fixed;
+    top: 280px;
+    margin-left: 20px;
+} */
+
+/* Bouton submit post */
+#subpost{
+    position: relative;
+    top: 210px;
+    background-color: #fae588;
+    border: solid 1px #c2b269;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+#subpost:hover{
+    background-color: #a4a276;
+}
+
+#user{
+ margin-left: 20px;
+}
+
+/* Bouton pour fermer le modal */
+#close{
+    border: none;
+    position: relative;    
+    left: 320px;
+    top: 4px;
+    border-radius: 25%;
+}
+
+#close:hover{
+  background-color: #555555;
+}
+
 
 #register{
     text-decoration: none;
@@ -56,6 +88,18 @@
     font-family: 'Monserrat-regular';
     font-size: 30px;
     margin-left: 450px;
+}
+
+/* modal inscription */
+#pop{
+    /* display: none; */
+    height: 200px;
+    width: 1263px;
+    outline: 1px solid grey;
+    position: sticky;
+    padding: 20px;
+    top: 50;
+    left: 50;
 }
 
 

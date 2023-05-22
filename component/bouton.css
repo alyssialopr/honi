@@ -1,8 +1,8 @@
 /* Bouton Nouveau post flottant */
 #newpost{ 
     display: flex;
-    border: solid 2px #27787c;
-    background-color: #00AFB9;
+    border: solid 2px #c2b269;
+    background-color: #fae588;
     height: 50px;
     width: 50px;
     border-radius: 50px; 
@@ -21,35 +21,14 @@
     position: fixed;
 }
 
-/* Bouton pour fermer le modal */
-#close{
-    border: none;
-    position: relative;    
-    left: 300px;
-    top: 2px;
-    border-radius: 25%;
-}
-
-#close:hover{
-  background-color: #555555;
-  
-}
-
-/* Bouton submit post */
-#subpost{
-    position: relative;
-    top: 180px;
-    background-color: #00AFB9;
-
-}
 
 
 /* Bouton S'inscrire */
 .inscription{
     border-radius: 40px;
-    border: 1px solid #E47397;
-    background-color: #F0C7D2;
-    color: #E47397;
+    border: 1px solid #fad764;
+    background-color: #eadbab;
+    color: #debb46;
     width: 180px;
     height: 50px;
     font-size: 18px;
@@ -59,9 +38,9 @@
 /* Bouton Se connecter */
 .submit{
     border-radius: 40px;
-    border: 1px solid #E47397;
-    background-color: #F0C7D2;
-    color: #E47397;
+    border: 1px solid #fad764;
+    background-color: #eadbab;
+    color: #debb46;
     width: 180px;
     height: 50px;
     font-size: 18px;
@@ -105,15 +84,15 @@
 
 .btn:hover, 
 .btn:focus{
-    color: #ff298d;
-    background-color:  #fad1e4;
-    border-color: #ff7dba;
-    box-shadow: 0 0 0 3px #f087b8;
+    color: #8629ff;
+    background-color:  #c3a6e8;
+    border-color: #7711fd;
+    box-shadow: 0 0 0 2px #6817d2;
 }
 
 .btn.active{
-    color: #ff298d;
-    background-color:  #fad1e4
+    color: #8629ff;
+    background-color:  #c3a6e8;
 }
 
 /* Bouton supprimer post */

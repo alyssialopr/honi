@@ -9,27 +9,9 @@
     <title>Honi</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo-honi">
-            <img id="bee-honi" src="images/Logo/abeille-HONI.png" alt="logo Abeille Honi">
-        </div>
-        <div class="titre">
-            <h3 class="honi">Honi</h3>
-        </div>
-            <div class="recherche">
-                <form> 
-                    <input type="search" class="search" placeholder="Recherche">
-                </form>
-            </div>
-            <div class="head-logo" id="sidenavbar">
-                <button class="btn-logo"><img class="logo" id="discussion" src="images/Logo/discution.png" alt="logo discussion"><span class="modif">Discussions</span></button>
-                <button class="btn-logo"><img class="logo" id="notifications" src="images/Logo/notification.png" alt="logo notification"><span class="modif">Notifications</span></button>
-                <button class="btn-logo"><img class="logo" id="reglage" src="images/Logo/reglages.png" alt="logo reglage"><span class="modif">Réglages</span></button>
-                <button class="btn-logo" id="compte"><img class="logo" id="utilisateur" src="images/Logo/utilisateur.png" alt="logo utilisateur" ><span class="modif">Compte</span></button>
-                <button id="closed">x</button>
-            </div>
-            <button class="hamburger" id="burger"></button>
-    </header>
+    <?php 
+    include_once 'header.template.php'
+    ?>
     <div class="container">
         <div class="row" id="row">
             <div class="col-3" id="tendance">
@@ -37,24 +19,20 @@
                     <h3 class="trend">Tags</h3>
                 </div>
                 <div class="hashtag" id="tag">
-                    <button class="btn btn-bs" onclick="filterSelection('all')">Voir tout</button>
-                    <button class="btn btn-bs" onclick="filterSelection('art')">Arts</button>
-                    <button class="btn btn-bs" onclick="filterSelection('jv')">VideosGames</button>
-                    <button class="btn btn-bs" onclick="filterSelection('livres')">Livres</button>
-                    <button class="btn btn-bs">Internet</button>
-                    <button class="btn btn-bs">Coding</button>
-                    <button class="btn btn-bs">Voyage</button>
-                    <button class="btn btn-bs">Environnement</button>
-                    <button class="btn btn-bs">Films</button>
-                    <button class="btn btn-bs">AlexaDot</button>
-                    <button class="btn btn-bs">Créations</button>
+                    <button class="btn btn-bs all">Voir tout</button>
+                    <button class="btn btn-bs art">Arts</button>
+                    <button class="btn btn-bs vg">VideosGames</button>
+                    <button class="btn btn-bs tech">Tech</button>
+                    <button class="btn btn-bs internet">Internet</button>
+                    <button class="btn btn-bs coding">Coding</button>
+                    <button class="btn btn-bs voyage">Voyage</button>
+                    <button class="btn btn-bs environnement">Environnement</button>
+                    <button class="btn btn-bs films">Films</button>
+                    <button class="btn btn-bs alexa">AlexaDot</button>
+                    <button class="btn btn-bs crea">Créations</button>
                 </div>
             </div>
             <div class="col-8 story" id="timeline">
-                    <?php if (!empty ($user) && !empty($contenu)) :  ?>
-                    <?= "@$user" ?>
-                    <?= ": $contenu" ?>
-                    <?php endif; ?>
                         <?php
                             foreach($posts as $post){
                         ?>
@@ -62,7 +40,6 @@
                             <h3>@<?= $post['user'] ?></h3>
                             <p><?= $post['contenu'] ?></p>
                             <p><?= date("d/m/Y", strtotime($post['date'])) ?> à <?= date("H:i", strtotime($post['date'])) ?></p>
-                            
                             <form action="delete.php" method="POST">
                                 <input type="hidden" name="form" value="formulaire_suppression_post">
                                 <input type="hidden" name="post_id" value="<?= $post['id'] ?>">
@@ -72,23 +49,35 @@
                     <?php
                     }
                     ?>
-
             </div>
-       
             <div class="col-1" id="floatbutton">
                 <div class="modale" id="modale">
                     <button id="close">x</button>
                     <form action="" method="POST">
                         <input type="hidden" name="form" value="formulaire_ajout_post">
-                        <input type="text" name="user" id="user" placeholder="@pseudo">
+                        <input type="text" name="user" id="user" placeholder="@pseudo" autocomplete=off>
                         <br>
                         <textarea name="contenu" id="contenu" cols="40" rows="10" required></textarea>
+                        <br>
+                        <select class="filtretags" name="tags" id="tags">
+                            <option value="">--Select--</option>
+                            <option value="arts">Arts</option>
+                            <option value="videogames">VideosGames</option>
+                            <option value="tech">Tech</option>
+                            <option value="internet">Internet</option>
+                            <option value="coding">Coding</option>
+                            <option value="voyage">Voyage</option>
+                            <option value="environnement">Environnement</option>
+                            <option value="films">Films</option>
+                            <option value="alexadot">AlexaDot</option>
+                            <option value="créations">Créations 🧶</option>
+                        </select>
                         <br>
                         <input id="subpost" type="submit" value="Envoyer">
                     </form>
                 </div>
             </div> 
-     </div>
+        </div>
     </div>
     <button id="newpost">
         <span class="plus">+</span>
