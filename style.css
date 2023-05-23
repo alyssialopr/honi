@@ -6,6 +6,7 @@
 @import url(component/inscriptionstyle.css);
 @import url(component/modal.css);
 @import url(component/profilstyle.css);
+@import url(component/responsive.css);
 
 @font-face {
     font-family: 'Larissa' ;

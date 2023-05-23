@@ -21,7 +21,7 @@
             </div>
             <img class="bonhomme" src="images/Logo/bonhomme.png" alt="logo photo de profil">
             <h4 id="pseudo">
-                <?php echo $_SESSION ['id']; ?>
+                <?php echo $_SESSION ['name']; ?>
                 <br>
                 @<?php echo $_SESSION['username'];?>
             </h4>

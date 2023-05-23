@@ -38,6 +38,11 @@
     margin-left: 140px;
 }
 
+#pseudo{
+    display: grid;
+    align-items: center;
+}
+
 @media screen and (max-width : 800px){
     #inscription{
         flex: 0 0 100%;

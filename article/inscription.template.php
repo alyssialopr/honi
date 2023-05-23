@@ -38,7 +38,7 @@
                     </div>
                     <p class="ou">ou</p>
                     <div class="input">
-                        <form class="formulaire" method="POST" action="" autocomplete="off">
+                        <form class="formulaire" method="POST" action="index.php" autocomplete="off">
                             <input type="hidden" name="form" value="formulaire_honi">
                             <br>
                             <input type="text" name="name" class="nom-util" placeholder="Prénom">

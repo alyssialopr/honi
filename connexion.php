@@ -5,27 +5,29 @@ require 'config/database.php';
 // (ouverture de la session)
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (!empty ($_POST['name']) && ($_POST['username']) && ($_POST['password'])) {
-        $name = ($_POST['name']); 
-        $username = ($_POST['username']);
-        $pass = ($_POST['password']);
-
-        // requete pour récuperer l'username et le password
-        $recupUser = $database -> prepare('SELECT * FROM utilisateur WHERE name = ? AND username = ? AND password = ?');
-        $recupUser -> execute(array ($username, $pass));
+    $pass2 = $_POST['password'];
         
-        if ($recupUser -> rowCount () > 0) {
-            $_SESSION['name'] = $name;
-            $_SESSION['username'] = $username;
-            $_SESSION['password'] = $pass;
-            $_SESSION['id'] = $recupUser -> fetch()['id'];
-            header ('Location: profil.php');
-        }
+    if (($_POST['username']) && ($_POST['password'])) {
+            $username = ($_POST['username']);
+            $pass =  ($_POST['password']);
+            // requete pour récuperer l'username et le password
+            $recupUser = $database -> prepare('SELECT * FROM utilisateur WHERE username = ?');
+            $recupUser -> execute(array ($username));
+            $user = $recupUser->fetch();
 
-        else {
-            echo "Votre username ou votre mot de passe est incorrect";
+            $motdepasse = password_verify($_POST['password'], $user['password']);
+                if ($motdepasse == true){
+                    $_SESSION['name'] = $user['name'];
+                    $_SESSION['username'] = $user['username'];
+                    $_SESSION['password'] = $user['password'];
+                    $_SESSION['id'] = $recupUser -> fetch()['id'];
+                    header('Location:profil.php');
+                }
+
+                else {
+                    echo "Votre username ou votre mot de passe est incorrect";
+                }
         }
-    }
 }
 
 require_once 'article/connexion.template.php'

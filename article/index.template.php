@@ -60,7 +60,7 @@
                         <textarea name="contenu" id="contenu" cols="40" rows="10" required></textarea>
                         <br>
                         <select class="filtretags" name="tags" id="tags">
-                            <option value="">--Select--</option>
+                            <option value="">Choisir son tag</option>
                             <option value="arts">Arts</option>
                             <option value="videogames">VideosGames</option>
                             <option value="tech">Tech</option>
@@ -88,6 +88,11 @@
             <a href="http://localhost/honi/inscription.php?form=formulaire_honi"><button id="register">Inscris toi !</button></a>
         </div>
     </div>
+    <section class="deletemodal">
+        <p class="questionsppr">
+
+        </p>
+    </section>
     <script src="main.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

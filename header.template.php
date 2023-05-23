@@ -9,7 +9,7 @@
     </div>
         <div class="recherche">
             <form> 
-                <input type="search" class="search" placeholder="Recherche">
+                <input type="search" name="recherche" class="search" placeholder="Recherche">
             </form>
         </div>
         <div class="head-logo" id="sidenavbar">

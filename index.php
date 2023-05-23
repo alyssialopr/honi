@@ -27,3 +27,15 @@ $posts = $request->fetchAll(PDO::FETCH_ASSOC);
 
 require_once 'article/index.template.php';
 ?> 
+
+<?php  
+if (!empty($_GET['recherche'])) {
+  $data = [
+    "recherche" => "%" . $_GET['recherche'] . "%",
+  ];
+
+  $request_search = $database->prepare("SELECT * FROM post WHERE contenu LIKE :recherche");
+  $request_search->execute($data);
+  $posts = $request_search->fetchAll(PDO::FETCH_ASSOC);
+}
+?>
