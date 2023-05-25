@@ -7,6 +7,7 @@
 @import url(component/modal.css);
 @import url(component/profilstyle.css);
 @import url(component/responsive.css);
+@import url(component/bootstrap.css);
 
 @font-face {
     font-family: 'Larissa' ;
@@ -139,14 +140,3 @@ img{
     animation-name: shakeX;
   }
 
-
-@media screen and (max-width : 800px) {
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .col{
-            visibility: hidden;
-        }
-}

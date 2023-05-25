@@ -13,21 +13,44 @@ close.onclick = function() {
     modal.style.display = "none";
 }
 
-// Bouton suppression
-const delt = document.getElementById('sppr')
+// Bouton suppression (A REFAIRE)
+// const delt = document.getElementById('sppr')
 
-delt.addEventListener("click", () => {
-  confirm("Souhaitez-vous supprimer ce post");
-})
+// delt.addEventListener("click", () => {
+//   confirm("Souhaitez-vous supprimer ce post");
+// })
+
+// Bouton de suppression v2
+const btnnon = document.getElementById('negation');
+
+const btnyes = document.getElementById('yes');
+
+const btndelete = document.getElementById("sppr");
+
+const modalsupprime = document.getElementById('deletemodal');
+
+btndelete.onclick = function () {
+  modalsupprime.style.display = "block";
+};
+
+btnnon.onclick = function () {
+  modalsupprime.style.display = "none";
+};
+
+// if (btnyes.onclick = function () {
+// }) {
+  
+// }
+
 
 // Effet flou sur tout l'écran
-const blurry = document.getElementById('row');
+// const blurry = document.getElementById('row');
 
-window.addEventListener('scroll', function() {
-  const scrollDistance = window.pageYOffset;
+// window.addEventListener('scroll', function() {
+//   const scrollDistance = window.pageYOffset;
 
-  blurry.style.filter = `blur(${scrollDistance / 1000}px)`;
-});
+//   blurry.style.filter = `blur(${scrollDistance / 1000}px)`;
+// });
 
 
 // Local Storage

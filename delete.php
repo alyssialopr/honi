@@ -1,7 +1,7 @@
 <?php
 require_once 'config/database.php';
 
-// Requete de suppression
+// Requête de suppression
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['form']) && $_POST['form'] === "formulaire_suppression_post") {
       if (!empty($_POST['post_id'])) {

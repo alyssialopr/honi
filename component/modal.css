@@ -6,7 +6,7 @@
     top: 0;
     background-color: rgb(232, 236, 207);
     width: 351px;
-    height: 363px;
+    height: 378px;
     border-radius: 20px;
 }
 
@@ -23,21 +23,21 @@
 .filtretags{
     display: flex;
     position: fixed;
+    top: 310px;
+    margin-left: 20px;
+}
+
+#postimage{
+    display: flex;
+    position: fixed;
     top: 270px;
     margin-left: 20px;
 }
 
-/* #submitimage{
-    display: flex;
-    position: fixed;
-    top: 280px;
-    margin-left: 20px;
-} */
-
 /* Bouton submit post */
 #subpost{
     position: relative;
-    top: 210px;
+    top: 215px;
     background-color: #fae588;
     border: solid 1px #c2b269;
     margin-left: 20px;
@@ -100,6 +100,49 @@
     padding: 20px;
     top: 50;
     left: 50;
+}
+
+
+/* Modal suppression de post */
+.deletemodal{
+    display: none;
+    position: fixed;
+    top: 40px;
+    left: 470px;
+    width: 350px;
+    height: 290px;
+    background-color: #ECEAEAFC;
+    border: 3px solid #B0ACAC;
+    border-radius: 45px;
+}
+
+.questionsppr{
+    display: grid;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.souhait{
+    font-size: 28px;
+}
+
+.btnyn{
+    border: 2px solid #B4AE82;
+    background-color: #E8E1AA;
+    width: 90px;
+    height: 45px;
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+#yes:hover{
+    background-color: #a3f6a7cb;
+    border: 2px solid #3a783d;
+}
+
+#negation:hover{
+    background-color: #f99191cb;
+    border: 2px solid #922b2b;
 }
 
 

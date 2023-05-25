@@ -1,0 +1,191 @@
+/* Bouton bootstrap */
+/* bouton tendance */
+.btn{
+   width: 250px;
+   margin-top: 10px;
+   margin-left: 10px;
+  }
+
+/* Bouton tendance all */
+.all:hover, 
+.all:focus{
+    color: #6d29ff;
+    background-color:  #915dff;
+    border-color: #733fe3;
+    box-shadow: 0 0 0 2px #733fe3;
+}
+
+.all:active{
+    color: #6d29ff;
+    background-color:  #915dff;
+}
+
+/* Bouton tendance art */
+.art:hover, 
+.art:focus{
+    color: #1e719a;
+    background-color:  #A9DEF9;
+    border-color: #6eb8dc;
+    box-shadow: 0 0 0 2px #5ba7cd;
+}
+
+.art:active{
+    color: #1a5471;
+    background-color:  #A9DEF9;
+}
+
+
+/* Bouton tendance video games */
+.vg:hover, 
+.vg:focus{
+    color: #47b672;
+    background-color:  #D0F4DE;
+    border-color: #52cf82;
+    box-shadow: 0 0 0 2px #3ab469;
+}
+
+.vg:active{
+    color: #47b672;
+    background-color:  #D0F4DE;
+}
+
+/* Bouton tendance tech */
+.tech:hover, 
+.tech:focus{
+    color: #e0c307;
+    background-color:  #f4e795;
+    border-color: #ffdd00;
+    box-shadow: 0 0 0 2px #ead444;
+}
+
+.tech:active{
+    color: #e0c307;
+    background-color:  #eede78;
+}
+
+/* Bouton tendance internet */
+.internet:hover, 
+.internet:focus{
+    color: #e06907;
+    background-color:  #f4c095;
+    border-color: #ff8400;
+    box-shadow: 0 0 0 2px #ea9d44;
+}
+
+.internet:active{
+    color: #e06907;
+    background-color:  #f4c095;
+}
+
+/* Bouton tendance coding */
+.coding:hover, 
+.coding:focus{
+    color: #e007ce;
+    background-color:  #f495f1;
+    border-color: #ff00e1;
+    box-shadow: 0 0 0 2px #ea44e7;
+}
+
+.coding:active{
+    color: #e007ce;
+    background-color:  #f495f1;
+}
+
+/* Bouton tendance voyage */
+.voyage:hover, 
+.voyage:focus{
+    color: #0707e0;
+    background-color:  #9598f4;
+    border-color: #0051ff;
+    box-shadow: 0 0 0 2px #4484ea;
+}
+
+.voyage:active{
+    color: #0707e0;
+    background-color:  #9598f4;
+}
+
+/* Bouton tendance environnement */
+.environnement:hover, 
+.environnement:focus{
+    color: #5ae007;
+    background-color:  #b3f495;
+    border-color: #81d858;
+    box-shadow: 0 0 0 2px #6fcb44;
+}
+
+.environnement:active{
+    color: #5ae007;
+    background-color:  #b3f495;
+}
+
+
+/* Bouton tendance films */
+.films:hover, 
+.films:focus{
+    color: #e00707;
+    background-color:  #f49595;
+    border-color: #d85858;
+    box-shadow: 0 0 0 2px #cb4444;
+}
+
+.films:active{
+    color: #e00707;
+    background-color:  #f49595;
+}
+
+/* Bouton tendance films */
+.films:hover, 
+.films:focus{
+    color: #e00707;
+    background-color:  #f49595;
+    border-color: #d85858;
+    box-shadow: 0 0 0 2px #cb4444;
+}
+
+.films:active{
+    color: #e00707;
+    background-color:  #f49595;
+}
+
+/* Bouton tendance alexa */
+.alexa:hover, 
+.alexa:focus{
+    color: #777e52;
+    background-color:  #d4e09b;
+    border-color: #c3d664;
+    box-shadow: 0 0 0 2px #c3d664;
+}
+
+.alexa:active{
+    color: #777e52;
+    background-color:  #d4e09b;
+}
+
+/* Bouton tendance alexa */
+.alexa:hover, 
+.alexa:focus{
+    color: #853dd2;
+    background-color:  #bc96e6;
+    border-color: #8f5cc7;
+    box-shadow: 0 0 0 2px #8f5cc7;
+}
+
+.alexa:active{
+    color: #853dd2;
+    background-color:  #bc96e6;
+}
+
+/* Bouton tendance crea */
+.crea:hover, 
+.crea:focus{
+    color: #0a1470;
+    background-color:  #3541ae;
+    border-color: #0e1da3;
+    box-shadow: 0 0 0 2px #0e1da3;
+}
+
+.crea:active{
+    color: #0a1045;
+    background-color:  #3541ae;
+}

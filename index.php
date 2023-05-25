@@ -1,9 +1,8 @@
 <?php
-require 'config/database.php'; 
+require 'config/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-  if (isset($_POST['form']) && $_POST['form'] === "formulaire_ajout_post") 
-  {
+  if (isset($_POST['form']) && $_POST['form'] === "formulaire_ajout_post") {
     if (!empty($_POST['user'] && !empty($_POST['contenu']))) {
       $user = $_POST['user'];
       $contenu = $_POST['contenu'];
@@ -25,17 +24,21 @@ $request->execute();
 $posts = $request->fetchAll(PDO::FETCH_ASSOC);
 
 
-require_once 'article/index.template.php';
-?> 
+// fonction de recherche 
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (!empty($_GET['recherche'])) {
+    $data = [
+      "recherche" => "%" . $_GET['recherche'] . "%",
+    ];
 
-<?php  
-if (!empty($_GET['recherche'])) {
-  $data = [
-    "recherche" => "%" . $_GET['recherche'] . "%",
-  ];
-
-  $request_search = $database->prepare("SELECT * FROM post WHERE contenu LIKE :recherche");
-  $request_search->execute($data);
-  $posts = $request_search->fetchAll(PDO::FETCH_ASSOC);
+    $request_search = $database->prepare("SELECT * FROM post WHERE contenu LIKE :recherche");
+    $request_search->execute($data);
+    $posts = $request_search->fetchAll(PDO::FETCH_ASSOC);
+  }
 }
+
+
+require_once 'article/index.template.php';
 ?>
+
+
