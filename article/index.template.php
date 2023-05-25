@@ -17,7 +17,7 @@
         ?>
     <div class="container">
         <div class="row" id="row">
-            <div class="col-3" id="tendance">
+            <div class="col-3 tend" id="tendance">
                 <div class="titre-tendance">
                     <h3 class="trend">Tags</h3>
                 </div>
@@ -46,6 +46,7 @@
                         <p>
                             <?= $post['contenu'] ?>
                         </p>
+                        <img class="imgpost" src="upload/<?php echo $post['image'] ?>" alt="">
                         <p>
                             <?= date("d/m/Y", strtotime($post['date'])) ?> à
                             <?= date("H:i", strtotime($post['date'])) ?>
@@ -59,13 +60,13 @@
             <div class="col-1" id="floatbutton">
                 <div class="modale" id="modale">
                     <button id="close">x</button>
-                    <form action="" method="POST">
+                    <form action="" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="form" value="formulaire_ajout_post">
                         <input type="text" name="user" id="user" placeholder="@pseudo" autocomplete=off>
                         <br>
                         <textarea name="contenu" id="contenu" cols="40" rows="10" required></textarea>
                         <br>
-                        <input type="file" name="filepost" id="postimage">
+                        <input type="file" name="filepost" id="postimage" accept="image/png, image/jpeg">
                         <br>
                         <select class="filtretags" name="tags" id="tags">
                             <option value="">Choisir son tag</option>

@@ -58,6 +58,8 @@ const text = document.querySelector('textarea');
 
 const storageKey = 'text';
 
+const submit = document.getElementById("subpost");
+
 const init = () => {
   
     text.value = localStorage.getItem(storageKey);
@@ -66,8 +68,16 @@ const init = () => {
       localStorage.setItem(storageKey, text.value);
     });
   }
+
+  submit.addEventListener('click', () => {
+    localStorage.removeItem(storageKey, text.value);
+  });
+
   
-  init();
+
+  
+init();
+
 
 
 // Side navbar

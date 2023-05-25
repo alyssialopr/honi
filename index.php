@@ -10,9 +10,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       $data = [
         "user" => $user,
         "contenu" => $contenu,
+        "image" => $_FILES['filepost']['name'],
       ];
 
-      $request_insert = $database->prepare("INSERT INTO post (user, contenu, date) VALUES (:user, :contenu, NOW())");
+      $img_name = $_FILES['filepost']['name'];
+      $tmp_img_name = $_FILES['filepost']['tmp_name'];
+      $upload = 'upload/';
+      move_uploaded_file($tmp_img_name,$upload.$img_name);
+      
+
+      $request_insert = $database->prepare("INSERT INTO post (user, contenu, image, date) VALUES (:user, :contenu, :image, NOW())");
       $post_inserted = $request_insert->execute($data);
     }
   }

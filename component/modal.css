@@ -144,21 +144,3 @@
     background-color: #f99191cb;
     border: 2px solid #922b2b;
 }
-
-
-@media screen and (max-width : 800px) {
-    #pop{
-        height: 130px;
-        width:auto;
-        margin-top: 70px;
-    }
-
-    .message{
-        font-size: 18px;
-        margin-left: 0;
-    }
-
-    #register{
-        margin-left: 0;
-    }
-}

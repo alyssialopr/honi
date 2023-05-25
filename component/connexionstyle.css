@@ -91,16 +91,3 @@
     width: 250px;
     height: 50px;
 }
-
-
-
-@media screen and (max-width : 800px){
-    #connexion{
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .formulaire{
-        margin-left: -40px;
-    }
-}
