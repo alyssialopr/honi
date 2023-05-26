@@ -6,21 +6,24 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (!empty($_POST['user'] && !empty($_POST['contenu']))) {
       $user = $_POST['user'];
       $contenu = $_POST['contenu'];
+      $tag = $_POST['tags'];
 
       $data = [
         "user" => $user,
         "contenu" => $contenu,
         "image" => $_FILES['filepost']['name'],
+        "tag" => $tag,
       ];
 
       $img_name = $_FILES['filepost']['name'];
       $tmp_img_name = $_FILES['filepost']['tmp_name'];
       $upload = 'upload/';
-      move_uploaded_file($tmp_img_name,$upload.$img_name);
-      
+      move_uploaded_file($tmp_img_name, $upload . $img_name);
 
-      $request_insert = $database->prepare("INSERT INTO post (user, contenu, image, date) VALUES (:user, :contenu, :image, NOW())");
+
+      $request_insert = $database->prepare("INSERT INTO post (user, contenu, image, tag, date) VALUES (:user, :contenu, :image, :tag, NOW())");
       $post_inserted = $request_insert->execute($data);
+      header("Location: ./index.php");
     }
   }
 }
@@ -47,5 +50,3 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
 require_once 'article/index.template.php';
 ?>
-
-

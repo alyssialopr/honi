@@ -1,17 +1,91 @@
 /* Responsive téléphone */
 @media screen and (min-width: 480px) and (max-width: 768px) {
-.honi {
+  .honi {
     display: none;
   }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .logo{
+    display: none;
+  }
+
+  .head-logo {
+    width: 300px !important;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* position: fixed; */
+    position: sticky;
+    padding-left: 70px;
+    padding-bottom: 40px;
+    right: 490px;
+    top: 0;
+    display: none;
+  }
+
+  .modif {
+    visibility: visible;
+    position: relative;
+    right: 10px;
+    top: 5px;
+    font-size: 15px;
+    width: 10px;
+    /* display: none; */
+  }
+
+  #closed {
+    visibility: visible;
+    margin-top: 30px;
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+ .btn{
+    width: 75px !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  .vg{
+    font-weight: lighter !important;
+  }
+
+  #tendance {
+    margin-left: -78px !important;
+  }
+
+  .imgpost{
+    width: 80%;
+  }
+
+  .popup{
+    width: fit-content !important;
+  }
+
+  .message{
+    align-items: center;  
+    margin-left: 0;
+  }
+
+  .deletemodal{
+    left: 110px;
+  }
+
 }
 
 /* Responsive tablette */
 @media screen and (min-width: 769px) and (max-width: 979px) {
-* {
+  * {
     margin: 0px;
     padding: 0px;
   }
 
+  /* navbar / sidenavbar */
   .search {
     margin-left: 100px;
   }
@@ -37,10 +111,10 @@
     /* display: none; */
   }
 
-  #compte {
+  /* #compte {
     position: relative;
     right: 10px;
-  }
+  } */
 
   .btn-logo:hover,
   .btn-logo:focus {
@@ -48,9 +122,10 @@
   }
 
   .head-logo {
-    width: 100000px;
+    width: 300px !important;
+    height: 600px;
     background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
+    position: fixed;
     padding-left: 70px;
     padding-bottom: 40px;
     right: 490px;
@@ -70,5 +145,12 @@
 
   .hamburger {
     display: block;
+  }
+
+  .btn{
+    width: 75px;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 }

@@ -2,7 +2,7 @@
 
 require 'config/database.php';
 
-// Requête pour récupérer les articles
+// Requête pour récupérer les utilisateurs
 $request = $database->prepare ("SELECT * FROM utilisateur"); 
 $request->execute();
 $utilisateur = $request->fetchAll(PDO::FETCH_ASSOC);

@@ -39,19 +39,35 @@
                 <?php
                 foreach ($posts as $post) {
                     ?>
-                    <div id="postinet">
+                    <div id="postinet" class="postinet <?php echo $post['tag']; ?>">
                         <h3>@
                             <?= $post['user'] ?>
                         </h3>
                         <p>
                             <?= $post['contenu'] ?>
                         </p>
+                        <?php if($post['image'] != null){?>
                         <img class="imgpost" src="upload/<?php echo $post['image'] ?>" alt="">
+                        <?php }?>
                         <p>
                             <?= date("d/m/Y", strtotime($post['date'])) ?> à
                             <?= date("H:i", strtotime($post['date'])) ?>
                         </p>
-                        <input id="sppr" type="image" src="images/logo/trashbin.png" alt="Supprimer">
+                        <input class="trashbins" id="sppr" type="image" src="images/logo/trashbin.png" alt="Supprimer">
+                        <section class="deletemodal none" id="deletemodal">
+                            <div class="questionsppr">
+                                <h4 class="souhait">Souhaitez-vous vraiment supprimer ce post ?</h4>
+                                <br>
+                                <div class="btnyesorno">
+                                    <form action="delete.php" method="POST">
+                                        <input type="hidden" name="form" value="formulaire_suppression_post">
+                                        <input type="hidden" name="post_id" value="<?= $post['id'] ?>">
+                                        <input type="submit" class="btnyn" id="yes" value="Oui">
+                                    </form>
+                                    <button class="btnyn btnno" id="negation">Non</button>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                     <?php
                 }
@@ -70,16 +86,16 @@
                         <br>
                         <select class="filtretags" name="tags" id="tags">
                             <option value="">Choisir son tag</option>
-                            <option value="arts">Arts</option>
-                            <option value="videogames">VideosGames</option>
-                            <option value="tech">Tech</option>
-                            <option value="internet">Internet</option>
-                            <option value="coding">Coding</option>
-                            <option value="voyage">Voyage</option>
-                            <option value="environnement">Environnement</option>
-                            <option value="films">Films</option>
-                            <option value="alexadot">AlexaDot</option>
-                            <option value="créations">Créations 🧶</option>
+                            <option value="arts-tag">Arts</option>
+                            <option value="videogames-tag">VideosGames</option>
+                            <option value="tech-tag">Tech</option>
+                            <option value="internet-tag">Internet</option>
+                            <option value="coding-tag">Coding</option>
+                            <option value="voyage-tag">Voyage</option>
+                            <option value="environnement-tag">Environnement</option>
+                            <option value="films-tag">Films</option>
+                            <option value="alexadot-tag">AlexaDot</option>
+                            <option value="crations-tag">Créations 🧶</option>
                         </select>
                         <br>
                         <input id="subpost" type="submit" value="Envoyer">
@@ -91,31 +107,19 @@
     <button id="newpost">
         <span class="plus">+</span>
     </button>
-    <div class="popup" id="pop">
+    <!-- <div class="popup" id="pop">
         <div class="popup-container">
             <p class="message"> Pour voir plus de posts </p>
             <a href="http://localhost/honi/inscription.php?form=formulaire_honi"><button id="register">Inscris
                     toi!</button></a>
         </div>
-    </div>
-    <section class="deletemodal" id="deletemodal">
-        <div class="questionsppr">
-            <h4 class="souhait">Souhaitez-vous vraiment supprimer ce post ?</h4>
-            <br>
-            <div class="btnyesorno">
-                <form action="delete.php" method="POST">
-                    <input type="hidden" name="form" value="formulaire_suppression_post">
-                    <input type="hidden" name="post_id" value="<?= $post['id'] ?>">
-                    <button class="btnyn" id="yes">Oui</button>
-                </form>
-                <button class="btnyn" id="negation">Non</button>
-            </div>
-        </div>
-    </section>
+    </div> -->
     <script src="main.js"></script>
+    <script src="js/filtre.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>

@@ -1,146 +1,155 @@
 /* modal de post */
-.modale{
-    display: none;
-    position: fixed;
-    right: 300px;
-    top: 0;
-    background-color: rgb(232, 236, 207);
-    width: 351px;
-    height: 378px;
-    border-radius: 20px;
+.modale {
+  display: none;
+  position: fixed;
+  right: 300px;
+  top: 0;
+  background-color: rgb(232, 236, 207);
+  width: 351px;
+  height: 378px;
+  border-radius: 20px;
 }
 
-#contenu{
-    display: flex;
-    position: fixed;
-    justify-content: start;
-    width: 300px;
-    height: 200px;
-    padding: 0;
-    margin-left: 20px;
+#contenu {
+  display: flex;
+  position: fixed;
+  justify-content: start;
+  width: 300px;
+  height: 200px;
+  padding: 0;
+  margin-left: 20px;
 }
 
-.filtretags{
-    display: flex;
-    position: fixed;
-    top: 310px;
-    margin-left: 20px;
+.filtretags {
+  display: flex;
+  position: fixed;
+  top: 310px;
+  margin-left: 20px;
 }
 
-#postimage{
-    display: flex;
-    position: fixed;
-    top: 270px;
-    margin-left: 20px;
+#postimage {
+  display: flex;
+  position: fixed;
+  top: 270px;
+  margin-left: 20px;
 }
 
 /* Bouton submit post */
-#subpost{
-    position: relative;
-    top: 215px;
-    background-color: #fae588;
-    border: solid 1px #c2b269;
-    margin-left: 20px;
-    border-radius: 10px;
+#subpost {
+  position: relative;
+  top: 215px;
+  background-color: #fae588;
+  border: solid 1px #c2b269;
+  margin-left: 20px;
+  border-radius: 10px;
 }
 
-#subpost:hover{
-    background-color: #a4a276;
+#subpost:hover {
+  background-color: #a4a276;
 }
 
-#user{
- margin-left: 20px;
+#user {
+  margin-left: 20px;
 }
 
 /* Bouton pour fermer le modal */
-#close{
-    border: none;
-    position: relative;    
-    left: 320px;
-    top: 4px;
-    border-radius: 25%;
+#close {
+  border: none;
+  position: relative;
+  left: 320px;
+  top: 4px;
+  border-radius: 25%;
 }
 
-#close:hover{
+#close:hover {
   background-color: #555555;
 }
 
-
-#register{
-    text-decoration: none;
-    font-family:'Monserrat-regular' ;
-    outline: none;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    border: none;
-    height: 60px;
-    width: 120px;
-    border-radius: 40px;
-    margin-left: 560px;
+#register {
+  text-decoration: none;
+  font-family: "Monserrat-regular";
+  outline: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  border: none;
+  height: 60px;
+  width: 120px;
+  border-radius: 40px;
+  margin-left: 560px;
 }
 
-#register:hover{
-    background-color: rgb(136, 136, 136);
+#register:hover {
+  background-color: rgb(136, 136, 136);
 }
 
-.message{
-    font-family: 'Monserrat-regular';
-    font-size: 30px;
-    margin-left: 450px;
+.message {
+  font-family: "Monserrat-regular";
+  font-size: 30px;
+  margin-left: 450px;
 }
 
 /* modal inscription */
-#pop{
-    /* display: none; */
-    height: 200px;
-    width: 1263px;
-    outline: 1px solid grey;
-    position: sticky;
-    padding: 20px;
-    top: 50;
-    left: 50;
+#pop {
+  /* display: none; */
+  height: 200px;
+  width: 1263px;
+  outline: 1px solid grey;
+  position: sticky;
+  padding: 20px;
+  top: 50;
+  left: 50;
 }
-
 
 /* Modal suppression de post */
-.deletemodal{
-    display: none;
-    position: fixed;
-    top: 40px;
-    left: 470px;
-    width: 350px;
-    height: 290px;
-    background-color: #ECEAEAFC;
-    border: 3px solid #B0ACAC;
-    border-radius: 45px;
+.deletemodal {
+  position: fixed;
+  top: 40px;
+  left: 470px;
+  width: 350px;
+  height: 290px;
+  background-color: #eceaeafc;
+  border: 3px solid #b0acac;
+  border-radius: 45px;
 }
 
-.questionsppr{
-    display: grid;
-    text-align: center;
-    margin-top: 70px;
+.none {
+  display: none;
 }
 
-.souhait{
-    font-size: 28px;
+.questionsppr {
+  display: grid;
+  text-align: center;
+  margin-top: 70px;
 }
 
-.btnyn{
-    border: 2px solid #B4AE82;
-    background-color: #E8E1AA;
-    width: 90px;
-    height: 45px;
-    font-size: 25px;
-    border-radius: 20px;
+.souhait {
+  font-size: 28px;
 }
 
-#yes:hover{
-    background-color: #a3f6a7cb;
-    border: 2px solid #3a783d;
+.btnyn {
+  border: 2px solid #b4ae82;
+  background-color: #e8e1aa;
+  width: 90px;
+  height: 45px;
+  font-size: 25px;
+  border-radius: 20px;
 }
 
-#negation:hover{
-    background-color: #f99191cb;
-    border: 2px solid #922b2b;
+#yes:hover {
+  background-color: #a3f6a7cb;
+  border: 2px solid #3a783d;
+}
+
+#negation:hover {
+  background-color: #f99191cb;
+  border: 2px solid #922b2b;
+}
+
+.block {
+  display: block !important;
+}
+
+.none {
+  display: none !important;
 }

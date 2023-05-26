@@ -1,47 +1,49 @@
 // Faire apparaitre le modal
-const button = document.getElementById('newpost');
+const button = document.getElementById("newpost");
 
-const modal = document.getElementById('modale');
+const modal = document.getElementById("modale");
 
-const close = document.getElementById('close');
+const close = document.getElementById("close");
 
-button.onclick = function() {
-    modal.style.display = "block";
-}
-
-close.onclick = function() {
-    modal.style.display = "none";
-}
-
-// Bouton suppression (A REFAIRE)
-// const delt = document.getElementById('sppr')
-
-// delt.addEventListener("click", () => {
-//   confirm("Souhaitez-vous supprimer ce post");
-// })
-
-// Bouton de suppression v2
-const btnnon = document.getElementById('negation');
-
-const btnyes = document.getElementById('yes');
-
-const btndelete = document.getElementById("sppr");
-
-const modalsupprime = document.getElementById('deletemodal');
-
-btndelete.onclick = function () {
-  modalsupprime.style.display = "block";
+button.onclick = function () {
+  modal.style.display = "block";
 };
 
-btnnon.onclick = function () {
-  modalsupprime.style.display = "none";
+close.onclick = function () {
+  modal.style.display = "none";
 };
+
+// Bouton de suppression
+const btnnon = document.querySelectorAll('.btnno');
+
+const btnyes = document.getElementById("yes");
+
+const btndeletes = document.querySelectorAll(".trashbins");
+
+const modalsupprime = document.querySelectorAll('.deletemodal')
+
+btndeletes.forEach((btndelete) => {
+  btndelete.addEventListener("click", () => {
+    const nextElement = btndelete.nextElementSibling;
+    nextElement.classList.toggle("block");
+    nextElement.classList.toggle("none");
+  });
+});
+
+
+btnnon.forEach(btn => {
+  btn.addEventListener('click', () => {
+    modalsupprime.forEach(mdl => {
+      mdl.classList.add('none')
+    });
+  })
+});
+
 
 // if (btnyes.onclick = function () {
 // }) {
-  
-// }
 
+// }
 
 // Effet flou sur tout l'écran
 // const blurry = document.getElementById('row');
@@ -52,47 +54,39 @@ btnnon.onclick = function () {
 //   blurry.style.filter = `blur(${scrollDistance / 1000}px)`;
 // });
 
-
 // Local Storage
-const text = document.querySelector('textarea');
+const text = document.querySelector("textarea");
 
-const storageKey = 'text';
+const storageKey = "text";
 
 const submit = document.getElementById("subpost");
 
 const init = () => {
-  
-    text.value = localStorage.getItem(storageKey);
-    
-    text.addEventListener('input', () => {
-      localStorage.setItem(storageKey, text.value);
-    });
-  }
+  text.value = localStorage.getItem(storageKey);
 
-  submit.addEventListener('click', () => {
-    localStorage.removeItem(storageKey, text.value);
+  text.addEventListener("input", () => {
+    localStorage.setItem(storageKey, text.value);
   });
+};
 
-  
+submit.addEventListener("click", () => {
+  localStorage.removeItem(storageKey, text.value);
+});
 
-  
 init();
 
-
-
 // Side navbar
-const btnnav = document.getElementById('burger');
+const btnnav = document.getElementById("burger");
 
-const navbar = document.getElementById('sidenavbar');
+const navbar = document.getElementById("sidenavbar");
 
-const closed = document.getElementById('closed');
+const closed = document.getElementById("closed");
 
-btnnav.onclick = function() {
-    navbar.style.display = "block";
-}
+btnnav.onclick = function () {
+  navbar.style.display = "block";
+};
 
-closed.onclick = function() {
-    navbar.style.display = "none";
-}
+closed.onclick = function () {
+  navbar.style.display = "none";
+};
 
-// Filtres sur les tags
