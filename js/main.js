@@ -46,13 +46,15 @@ btnnon.forEach(btn => {
 // }
 
 // Effet flou sur tout l'écran
-// const blurry = document.getElementById('row');
+const blurry = document.getElementById('row');
+ 
+if (($_SESSION["id"]) === null) {
+  window.addEventListener("scroll", function () {
+    const scrollDistance = window.pageYOffset;
 
-// window.addEventListener('scroll', function() {
-//   const scrollDistance = window.pageYOffset;
-
-//   blurry.style.filter = `blur(${scrollDistance / 1000}px)`;
-// });
+    blurry.style.filter = `blur(${scrollDistance / 1000}px)`;
+  });
+}
 
 // Local Storage
 const text = document.querySelector("textarea");
