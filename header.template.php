@@ -14,7 +14,8 @@
     </div>
     <div class="head-logo" id="sidenavbar">
         <a href="deconnexion.php">
-            <button class="">Log out</button>
+            <button class="btn-logo"><img class="logo" id="deco" src="images/Logo/deconnexion.png"
+                alt="logo deconnexion"><span class="modif">Discussions</span></button>
         </a>
         <button class="btn-logo"><img class="logo" id="discussion" src="images/Logo/discution.png"
                 alt="logo discussion"><span class="modif">Discussions</span></button>

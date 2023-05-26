@@ -4,6 +4,13 @@
     display: none;
   }
 
+  .btn{
+    width: 75px !important;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -16,7 +23,6 @@
     width: 300px !important;
     height: 600px;
     background-color: rgba(0, 0, 0, 0.5);
-    /* position: fixed; */
     position: sticky;
     padding-left: 70px;
     padding-bottom: 40px;
@@ -45,12 +51,6 @@
     height: 20px;
   }
 
- .btn{
-    width: 75px !important;
-    padding: 0 !important;
-    margin-left: 0 !important;
-  }
-  
   .vg{
     font-weight: lighter !important;
   }
@@ -148,7 +148,7 @@
   }
 
   .btn{
-    width: 75px;
+    width: 75px !important;
     padding: 0;
     margin-right: 0;
     margin-left: 0;
