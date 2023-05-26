@@ -1,6 +1,4 @@
-<?
-require 'config/database.php';
-
+<?php
 if (isset ($_SESSION['id'])) {
     $datasession = ["id" => $_SESSION['id']];
 

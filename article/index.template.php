@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -10,7 +11,6 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Honi</title>
 </head>
-
 <body>
     <?php
     include_once 'header.template.php'
@@ -42,13 +42,15 @@
                     <div id="postinet" class="postinet <?php echo $post['tag']; ?>">
                         <h3>@
                             <?= $post['user'] ?>
+                            <?php if (isset($_SESSION['id'])) {
+                                    echo @($_SESSION['name']);} ?>
                         </h3>
                         <p>
                             <?= $post['contenu'] ?>
                         </p>
-                        <?php if($post['image'] != null){?>
-                        <img class="imgpost" src="upload/<?php echo $post['image'] ?>" alt="">
-                        <?php }?>
+                        <?php if ($post['image'] != null) { ?>
+                            <img class="imgpost" src="upload/<?php echo $post['image'] ?>" alt="">
+                        <?php } ?>
                         <p>
                             <?= date("d/m/Y", strtotime($post['date'])) ?> à
                             <?= date("H:i", strtotime($post['date'])) ?>
@@ -78,7 +80,7 @@
                     <button id="close">x</button>
                     <form action="" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="form" value="formulaire_ajout_post">
-                        <input type="text" name="user" id="user" placeholder="@pseudo" autocomplete=off>
+                        <!-- <input type="text" name="user" id="user" placeholder="@pseudo" autocomplete=off> -->
                         <br>
                         <textarea name="contenu" id="contenu" cols="40" rows="10" required></textarea>
                         <br>
@@ -104,9 +106,11 @@
             </div>
         </div>
     </div>
-    <button id="newpost">
-        <span class="plus">+</span>
-    </button>
+    <?php if (isset($_SESSION['name'])) { ?>
+        <button id="newpost">
+            <span class="plus">+</span>
+        </button>
+    <?php } ?>
     <!-- <div class="popup" id="pop">
         <div class="popup-container">
             <p class="message"> Pour voir plus de posts </p>

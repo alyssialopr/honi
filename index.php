@@ -1,5 +1,6 @@
 <?php
 require 'config/database.php';
+require_once 'config/session.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
   if (isset($_POST['form']) && $_POST['form'] === "formulaire_ajout_post") {
@@ -46,7 +47,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $posts = $request_search->fetchAll(PDO::FETCH_ASSOC);
   }
 }
-
 
 require_once 'article/index.template.php';
 ?>
